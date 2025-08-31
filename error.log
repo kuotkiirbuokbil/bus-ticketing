@@ -1,0 +1,15 @@
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211922536257","sessionId":"ATUid_d706f4587f20e427a572cc467180abdb","text":"","timestamp":"2025-08-09T05:58:24.872Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211922536257","sessionId":"ATUid_b70011a22a30cc3ea5f817531239c809","text":"","timestamp":"2025-08-09T05:58:32.363Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211922536257","sessionId":"ATUid_fde52394af8dea33e5cb08babdddce15","text":"","timestamp":"2025-08-09T06:05:01.331Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211922536257","sessionId":"ATUid_56ead07123c77cbeceb56b669599196c","text":"","timestamp":"2025-08-09T06:11:11.869Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211922536257","sessionId":"ATUid_3bffef7a02d4ef40254a889b48357eb1","text":"","timestamp":"2025-08-09T07:09:03.334Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"123","text":"","timestamp":"2025-08-09T07:20:38.910Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"123","text":"","timestamp":"2025-08-09T07:24:17.623Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211922536257","sessionId":"ATUid_564fc0ca0423d4b701cefeaedd15835d","text":"","timestamp":"2025-08-09T07:29:51.086Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"123","text":"","timestamp":"2025-08-09T07:45:23.836Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"123","text":"","timestamp":"2025-08-09T08:02:39.919Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"123","text":"","timestamp":"2025-08-09T08:03:14.398Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"1","text":"","timestamp":"2025-08-09T08:58:31.716Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"1","text":"","timestamp":"2025-08-09T09:05:27.997Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"1","text":"","timestamp":"2025-08-09T09:10:46.625Z"}
+{"level":"error","message":"USSD Error: sanitize.value is not a function","phoneNumber":"+211123456789","sessionId":"1","text":"","timestamp":"2025-08-09T09:16:53.900Z"}
