@@ -57,15 +57,19 @@ In your Railway project dashboard, go to **Variables** and add:
 | `NODE_ENV` | `production` | Environment mode |
 | `PORT` | `${{PORT}}` | Railway's dynamic port (auto-set) |
 | `HOST` | `0.0.0.0` | Bind to all interfaces |
-| `DATABASE_PATH` | `/tmp/bus_ticketing.db` | Persistent database path |
+| `DATABASE_PATH` | `/tmp/bus_ticketing.db` | Writable database path |
 
-### 4. Troubleshooting Build Issues
+### 4. Troubleshooting Issues
 
-If you encounter build errors:
-
+#### Build Issues:
 1. **Nixpacks Issues**: The project now uses Railway's auto-detection instead of custom Nixpacks configuration
 2. **Docker Alternative**: A `Dockerfile` is provided as backup deployment method
 3. **Build Script**: The build script is simplified to avoid failures
+
+#### Database Issues:
+1. **SQLITE_CANTOPEN Error**: Make sure `DATABASE_PATH` is set to `/tmp/bus_ticketing.db`
+2. **Permission Issues**: The `/tmp` directory is writable in Railway containers
+3. **Database Path**: The app automatically uses `/tmp` in production mode
 
 ### 5. Custom Domain (Optional)
 

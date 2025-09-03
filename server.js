@@ -39,19 +39,24 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // ----------------- Database -----------------
-const dbPath = path.join(__dirname, process.env.DATABASE_PATH || 'bus_ticketing.db');
+// Use /tmp directory for Railway deployment, fallback to current directory for local dev
+const dbPath = process.env.DATABASE_PATH || (process.env.NODE_ENV === 'production' ? '/tmp/bus_ticketing.db' : path.join(__dirname, 'bus_ticketing.db'));
 let db;
 
 // Initialize database and create tables
 const initDatabase = () => {
   return new Promise((resolve, reject) => {
+    console.log(`[DB] Attempting to connect to database at: ${dbPath}`);
+    console.log(`[DB] NODE_ENV: ${process.env.NODE_ENV}`);
+    
     db = new sqlite3.Database(dbPath, (err) => {
       if (err) {
         console.error('[DB] Connection error:', err.message);
+        console.error('[DB] Error details:', err);
         reject(err);
         return;
       }
-      console.log('[DB] Connected to SQLite database');
+      console.log(`[DB] Connected to SQLite database at: ${dbPath}`);
       
       // Create tables
       const createTables = `
