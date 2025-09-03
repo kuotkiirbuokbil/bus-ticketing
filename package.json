@@ -4,7 +4,13 @@
   "description": "USSD bus ticketing system",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'No build step required'",
+    "test": "echo 'No tests specified'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "africastalking": "^0.5.4",
@@ -14,6 +20,7 @@
     "helmet": "^5.1.1",
     "mysql2": "^2.3.3",
     "sanitize": "^2.1.0",
+    "sqlite3": "^5.1.7",
     "winston": "^3.17.0",
     "xss-clean": "^0.1.4"
   }
