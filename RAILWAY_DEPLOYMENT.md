@@ -59,7 +59,15 @@ In your Railway project dashboard, go to **Variables** and add:
 | `HOST` | `0.0.0.0` | Bind to all interfaces |
 | `DATABASE_PATH` | `/tmp/bus_ticketing.db` | Persistent database path |
 
-### 4. Custom Domain (Optional)
+### 4. Troubleshooting Build Issues
+
+If you encounter build errors:
+
+1. **Nixpacks Issues**: The project now uses Railway's auto-detection instead of custom Nixpacks configuration
+2. **Docker Alternative**: A `Dockerfile` is provided as backup deployment method
+3. **Build Script**: The build script is simplified to avoid failures
+
+### 5. Custom Domain (Optional)
 
 1. Go to **Settings** → **Domains**
 2. Add your custom domain
