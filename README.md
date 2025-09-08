@@ -22,6 +22,18 @@ The server will start on `http://localhost:3000`
 
 **One-click deployment to Railway** - See [RAILWAY_DEPLOYMENT.md](./RAILWAY_DEPLOYMENT.md) for detailed instructions.
 
+## 📚 **Complete Setup Guides**
+
+### 🚀 **Production Setup**
+- **[Africa's Talking Integration](./AFRICASTALKING_SETUP.md)** - Connect to USSD provider
+- **[Custom Domain Setup](./CUSTOM_DOMAIN_SETUP.md)** - Professional domain configuration
+- **[Monitoring & Alerts](./MONITORING_SETUP.md)** - 24/7 system monitoring
+- **[Operator Management](./OPERATOR_MANAGEMENT.md)** - Train and manage operators
+
+### 📋 **Deployment Status**
+- **[Deployment Summary](./DEPLOYMENT_SUMMARY.md)** - Project organization overview
+- **[Deployment Status](./DEPLOYMENT_STATUS.md)** - Current deployment status
+
 ## 📱 USSD Endpoints
 
 ### Customer Interface (`/ussd`)
@@ -50,30 +62,30 @@ The server will start on `http://localhost:3000`
 ### Test Customer Flow
 ```bash
 # Start session
-curl -X POST http://localhost:3000/ussd \
+curl -X POST https://bus-ticketing-production.up.railway.app/ussd \
   -d "sessionId=test&serviceCode=*123#&phoneNumber=1234567890&text="
 
 # View buses
-curl -X POST http://localhost:3000/ussd \
+curl -X POST https://bus-ticketing-production.up.railway.app/ussd \
   -d "sessionId=test&serviceCode=*123#&phoneNumber=1234567890&text=1"
 
 # Book ticket (select bus 1, seat 5)
-curl -X POST http://localhost:3000/ussd \
+curl -X POST https://bus-ticketing-production.up.railway.app/ussd \
   -d "sessionId=test&serviceCode=*123#&phoneNumber=1234567890&text=2*1*5*1"
 ```
 
 ### Test Operator Flow
 ```bash
 # Login as operator
-curl -X POST http://localhost:3000/ussd-ops \
+curl -X POST https://bus-ticketing-production.up.railway.app/ussd-ops \
   -d "sessionId=op&text=1234"
 
 # View today's buses
-curl -X POST http://localhost:3000/ussd-ops \
+curl -X POST https://bus-ticketing-production.up.railway.app/ussd-ops \
   -d "sessionId=op&text=1234*1"
 
 # Verify booking
-curl -X POST http://localhost:3000/ussd-ops \
+curl -X POST https://bus-ticketing-production.up.railway.app/ussd-ops \
   -d "sessionId=op&text=1234*2*BOOKING_CODE"
 ```
 
