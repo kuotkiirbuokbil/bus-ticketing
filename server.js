@@ -133,11 +133,11 @@ const initDatabase = () => {
 // Insert sample data
 const insertSampleData = () => {
   return new Promise((resolve, reject) => {
-    // Insert sample operators
+    // Insert sample operators (Uganda)
     const operators = [
-      { name: 'Juba Express', pin: '1234' },
-      { name: 'Unity Transport', pin: '5678' },
-      { name: 'South Sudan Bus', pin: '9999' }
+      { name: 'Uganda Express', pin: '1234' },
+      { name: 'Central Coaches', pin: '5678' },
+      { name: 'Nile Bus', pin: '9999' }
     ];
 
     const insertOperators = `INSERT OR IGNORE INTO operators (name, ussd_pin) VALUES (?, ?)`;
@@ -167,10 +167,10 @@ const insertSampleBuses = () => {
     const dayAfter = new Date(now.getTime() + 48 * 60 * 60 * 1000);
 
     const buses = [
-      { route: 'Juba - Wau', operator: 'Juba Express', operator_id: 1, departure_time: tomorrow.toISOString(), total_seats: 50, available_seats: 45, price: 150.00 },
-      { route: 'Juba - Malakal', operator: 'Unity Transport', operator_id: 2, departure_time: tomorrow.toISOString(), total_seats: 50, available_seats: 50, price: 200.00 },
-      { route: 'Juba - Rumbek', operator: 'South Sudan Bus', operator_id: 3, departure_time: dayAfter.toISOString(), total_seats: 50, available_seats: 48, price: 120.00 },
-      { route: 'Juba - Yei', operator: 'Juba Express', operator_id: 1, departure_time: dayAfter.toISOString(), total_seats: 50, available_seats: 50, price: 80.00 }
+      { route: 'Kampala - Gulu', operator: 'Uganda Express', operator_id: 1, departure_time: tomorrow.toISOString(), total_seats: 50, available_seats: 45, price: 25000.00 },
+      { route: 'Kampala - Mbarara', operator: 'Central Coaches', operator_id: 2, departure_time: tomorrow.toISOString(), total_seats: 50, available_seats: 50, price: 30000.00 },
+      { route: 'Kampala - Jinja', operator: 'Nile Bus', operator_id: 3, departure_time: dayAfter.toISOString(), total_seats: 50, available_seats: 48, price: 15000.00 },
+      { route: 'Kampala - Mbale', operator: 'Uganda Express', operator_id: 1, departure_time: dayAfter.toISOString(), total_seats: 50, available_seats: 50, price: 20000.00 }
     ];
 
     const insertBuses = `INSERT OR IGNORE INTO buses (route, operator, operator_id, departure_time, total_seats, available_seats, price) VALUES (?, ?, ?, ?, ?, ?, ?)`;
@@ -228,6 +228,22 @@ app.get('/db-ping', async (_req, res) => {
   }
 });
 
+// ----------------- Friendly GET handlers -----------------
+app.get('/', (_req, res) => {
+  res.set('Content-Type', 'text/plain');
+  res.send('Bus Ticketing USSD (Uganda) is running. Use POST /ussd and POST /ussd-ops.');
+});
+
+app.get('/ussd', (_req, res) => {
+  res.set('Content-Type', 'text/plain');
+  res.status(405).send('Method Not Allowed. Use POST for USSD requests.');
+});
+
+app.get('/ussd-ops', (_req, res) => {
+  res.set('Content-Type', 'text/plain');
+  res.status(405).send('Method Not Allowed. Use POST for operator USSD requests.');
+});
+
 // ----------------- Session handling -----------------
 const sessions = new Map();
 const getSession = (sessionId) => {
@@ -256,7 +272,7 @@ const formatBusList = (buses) => {
   let out = 'CON Available Buses:\n';
   buses.forEach((b, i) => {
     const dt = new Date(b.departure_time).toLocaleString('en-GB');
-    out += `${i + 1}. ${b.route} | ${dt} | ${b.available_seats} seats | ${b.price} SSP\n`;
+    out += `${i + 1}. ${b.route} | ${dt} | ${b.available_seats} seats | ${b.price} UGX\n`;
   });
   out += '0. Back';
   return out;

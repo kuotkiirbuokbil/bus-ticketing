@@ -27,9 +27,9 @@
 ### **For Operators:**
 1. **Dial**: `*456#`
 2. **Enter PIN**:
-   - `1234` - Juba Express
-   - `5678` - Unity Transport
-   - `9999` - South Sudan Bus
+   - `1234` - Uganda Express
+   - `5678` - Central Coaches
+   - `9999` - Nile Bus
 3. **Select option**:
    - `1` - Today's buses
    - `2` - Verify booking

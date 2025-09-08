@@ -70,17 +70,17 @@ bus-ticketing/
 ### 🚌 **Sample Bus Operators**
 | Operator | PIN | Routes | Status |
 |----------|-----|--------|--------|
-| **Juba Express** | `1234` | Juba - Wau, Juba - Yei | Active |
-| **Unity Transport** | `5678` | Juba - Malakal | Active |
-| **South Sudan Bus** | `9999` | Juba - Rumbek | Active |
+| **Uganda Express** | `1234` | Kampala - Gulu, Kampala - Mbale | Active |
+| **Central Coaches** | `5678` | Kampala - Mbarara | Active |
+| **Nile Bus** | `9999` | Kampala - Jinja | Active |
 
 ### 🚌 **Sample Bus Routes**
 | Route | Operator | Price | Available Seats |
 |-------|----------|-------|-----------------|
-| **Juba - Wau** | Juba Express | 150 SSP | 45/50 |
-| **Juba - Malakal** | Unity Transport | 200 SSP | 50/50 |
-| **Juba - Rumbek** | South Sudan Bus | 120 SSP | 48/50 |
-| **Juba - Yei** | Juba Express | 80 SSP | 50/50 |
+| **Kampala - Gulu** | Uganda Express | 25000 UGX | 45/50 |
+| **Kampala - Mbarara** | Central Coaches | 30000 UGX | 50/50 |
+| **Kampala - Jinja** | Nile Bus | 15000 UGX | 48/50 |
+| **Kampala - Mbale** | Uganda Express | 20000 UGX | 50/50 |
 
 ---
 

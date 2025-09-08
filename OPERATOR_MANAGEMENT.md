@@ -14,9 +14,9 @@
 
 | Operator | PIN | Routes | Status |
 |----------|-----|--------|--------|
-| **Juba Express** | `1234` | Juba - Wau, Juba - Yei | Active |
-| **Unity Transport** | `5678` | Juba - Malakal | Active |
-| **South Sudan Bus** | `9999` | Juba - Rumbek | Active |
+| **Uganda Express** | `1234` | Kampala - Gulu, Kampala - Mbale | Active |
+| **Central Coaches** | `5678` | Kampala - Mbarara | Active |
+| **Nile Bus** | `9999` | Kampala - Jinja | Active |
 
 ### 1.2 Operator Capabilities
 
@@ -43,7 +43,7 @@ VALUES ('New Bus Company', '2468');
 #### **Add Operator's Buses:**
 ```sql
 INSERT INTO buses (route, operator, operator_id, departure_time, total_seats, available_seats, price)
-VALUES ('Juba - Aweil', 'New Bus Company', 4, '2025-09-06 08:00:00', 50, 50, 180.00);
+VALUES ('Kampala - Fort Portal', 'New Bus Company', 4, '2025-09-06 08:00:00', 50, 50, 35000.00);
 ```
 
 ### 2.2 Admin Interface (Future Enhancement)
@@ -62,7 +62,7 @@ VALUES ('Juba - Aweil', 'New Bus Company', 4, '2025-09-06 08:00:00', 50, 50, 180
 
 #### **How to Access:**
 1. **Dial USSD code**: `*456#`
-2. **Enter operator PIN**: `1234` (Juba Express example)
+2. **Enter operator PIN**: `1234` (Uganda Express example)
 3. **Access operator menu**
 
 #### **Expected Menu:**
@@ -107,10 +107,10 @@ Operator Menu
 #### **Output Example**:
 ```
 Today's buses:
-1. Juba - Wau | 2025-09-04 19:44 | 45/50
-2. Juba - Malakal | 2025-09-04 19:44 | 50/50
-3. Juba - Rumbek | 2025-09-05 19:44 | 48/50
-4. Juba - Yei | 2025-09-05 19:44 | 50/50
+1. Kampala - Gulu | 2025-09-04 19:44 | 45/50
+2. Kampala - Mbarara | 2025-09-04 19:44 | 50/50
+3. Kampala - Jinja | 2025-09-05 19:44 | 48/50
+4. Kampala - Mbale | 2025-09-05 19:44 | 50/50
 ```
 
 ### 4.2 Verify Booking
@@ -125,7 +125,7 @@ Today's buses:
 #### **Output Example**:
 ```
 Code 5WFPSX
-Juba - Wau @ 2025-09-04 19:44
+Kampala - Gulu @ 2025-09-04 19:44
 Seat 5
 Status CONFIRMED
 ```
@@ -151,10 +151,10 @@ Marked as boarded ✅
 #### **Output Example**:
 ```
 Seats left today:
-1. Juba - Wau: 45 left
-2. Juba - Malakal: 50 left
-3. Juba - Rumbek: 48 left
-4. Juba - Yei: 50 left
+1. Kampala - Gulu: 45 left
+2. Kampala - Mbarara: 50 left
+3. Kampala - Jinja: 48 left
+4. Kampala - Mbale: 50 left
 ```
 
 ### 4.5 Add Walk-in Passenger
@@ -163,7 +163,7 @@ Seats left today:
 #### **Purpose**: Add cash passengers
 #### **Process**:
 1. **Select Option 5**
-2. **Choose bus**: `1` (Juba - Wau)
+2. **Choose bus**: `1` (Kampala - Gulu)
 3. **System assigns seat automatically**
 
 #### **Output Example**:
@@ -186,7 +186,7 @@ Walk-in added. Seat 6. Code WALK1234 ✅
 
 #### **Sample Daily Report**:
 ```
-Juba Express - Daily Report
+Uganda Express - Daily Report
 Date: 2025-09-04
 
 Buses: 2

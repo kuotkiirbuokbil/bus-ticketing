@@ -85,7 +85,7 @@ Fill in the application details:
 
 ### 4.2 Test Operator USSD
 1. **Dial operator code**: `*456#`
-2. **Enter PIN**: `1234` (Juba Express)
+2. **Enter PIN**: `1234` (Uganda Express)
 3. **Expected Menu**:
    ```
    Operator Menu
@@ -146,9 +146,9 @@ curl -X POST https://bus-ticketing-production.up.railway.app/ussd-ops \
 - [ ] ✅ Health checks passing
 
 ### 6.3 Operator Training
-- [ ] ✅ Train Juba Express operators (PIN: 1234)
-- [ ] ✅ Train Unity Transport operators (PIN: 5678)
-- [ ] ✅ Train South Sudan Bus operators (PIN: 9999)
+- [ ] ✅ Train Uganda Express operators (PIN: 1234)
+- [ ] ✅ Train Central Coaches operators (PIN: 5678)
+- [ ] ✅ Train Nile Bus operators (PIN: 9999)
 - [ ] ✅ Create operator manual
 - [ ] ✅ Set up support procedures
 

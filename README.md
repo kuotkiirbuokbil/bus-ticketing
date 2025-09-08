@@ -53,9 +53,9 @@ The server will start on `http://localhost:3000`
 
 | Operator | PIN |
 |----------|-----|
-| Juba Express | 1234 |
-| Unity Transport | 5678 |
-| South Sudan Bus | 9999 |
+| Uganda Express | 1234 |
+| Central Coaches | 5678 |
+| Nile Bus | 9999 |
 
 ## 🧪 Testing
 
@@ -102,7 +102,7 @@ The system uses SQLite with the following tables:
 
 The system comes pre-loaded with:
 - 3 bus operators
-- 4 sample bus routes (Juba to Wau, Malakal, Rumbek, Yei)
+- 4 sample bus routes (Kampala to Gulu, Mbarara, Jinja, Mbale)
 - Various departure times and pricing
 
 ## 🔧 Health Checks
